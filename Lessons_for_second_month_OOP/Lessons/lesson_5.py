@@ -14,4 +14,5 @@ user_pass = '123123456'
 print(user_name)
 
 env.read_envfile('vars.env')
-print(os.environ.get('PYTHON'))
+t = os.environ.get('PYTHON')
+print(t)
