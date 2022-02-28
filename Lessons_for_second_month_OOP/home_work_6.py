@@ -37,7 +37,9 @@ class Data:
     def color(self, value):
         self.__color = value
 
+
 files = ['full_name.txt', 'email.txt', 'file_name.txt', 'color.txt']
+
 
 def Work():
     with open('MOCK_DATA.txt') as fread:
@@ -74,6 +76,7 @@ def Clear():
 
     file = open('color.txt', 'w')
     file.close()
+
 
 Clear()
 Work()

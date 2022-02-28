@@ -50,31 +50,25 @@ class Teacher(Person):
                 f'Married: {self.is_married} \n'
                 f'Experience: {self.experience} ')
 
-    # Метод считывание зарплаты
     def salary_count(self):
         if self.experience > 3:
             return ((Teacher.salary) + (self.experience - 3) * t)
         else:
             return Teacher.salary
 
-# Написать функцию create_students, в которой создается 3 объекта ученика, эти ученики
-# добавляются в список и список возвращается методом как результат.
-#  Call the function
+
 def create_students():
     st2 = ['Aman', 14, False, {'matha':5 ,'physics': 5 , 'english': 5}]
     st3 = ['Oleg', 14, False, dict(matha=3, physics=4, english=5)]
     st4 = ['Zholon', 14, False, dict(matha=4, physics=4, english=5)]
     return(list[st2, st3, st4])
 
-# Вызвать функцию create_students и через цикл распечатать всю информацию о каждом ученике
-# с его оценками по каждому предмету. Также рассчитать его среднюю оценку по всем предметам.
+
 for func in [create_students]:
     # list.append('kiwi')
     x = func()
     print(x)
 
-
-#  Создаем обьект для класса учитель
 teach1 = Teacher("Aleksey", 37, True, 4)
 t = (Teacher.salary / 100) * 5
 
