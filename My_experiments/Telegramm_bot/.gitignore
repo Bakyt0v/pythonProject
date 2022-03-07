@@ -1,7 +1,6 @@
+bot.env
 .idea
 venv
-vars.env
-bot.env
 __pycash__/
 *.py[cod]
 *$py.class
