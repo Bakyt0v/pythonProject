@@ -15,6 +15,7 @@ class GameEntity:
     def health(self, value):
         self.__health = value
 
+
     @property
     def damage(self):
         return self.__damage
