@@ -7,3 +7,4 @@ __pycash__/
 *$py.class
 *.so
 media
+.env

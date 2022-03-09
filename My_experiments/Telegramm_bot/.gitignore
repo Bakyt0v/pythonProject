@@ -1,8 +1,0 @@
-bot.env
-.idea
-venv
-__pycash__/
-*.py[cod]
-*$py.class
-*.so
-media
