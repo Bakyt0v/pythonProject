@@ -1,5 +1,4 @@
 class Person:
-
     # Конструктор
     def __init__(self, f, a, im):
         self.fullname = f
@@ -11,7 +10,6 @@ class Person:
                 f'Age: {self.age} \n'
                 f'Married: {self.is_married} ')
 man = Person('Bakyt_uulu_Amantur', 24, False)
-
 
 # Student
 class Student(Person):
