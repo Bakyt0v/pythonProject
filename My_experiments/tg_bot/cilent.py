@@ -13,6 +13,7 @@ async def help(message: types.Message):
                                             f'/start-- to see info about pythot \n'
                                             f'/quiz-- to see example quiz\n'
                                             f'/problem-- to se e class work tasks\n'
+                                            f'/new_command-- to se e class work tasks\n'
                                             f'/solve_task-- to see home work 1 from student {message.from_user.full_name}\n'
                                             f'/home_work_2-- to see home work 2 from student {message.from_user.full_name}',
                                             reply_markup=buttonss.keyboard_stat,)
@@ -91,7 +92,9 @@ async def home_work2(message: types.Message):
                            reply_markup=markup_hw)
 
 
-
+async def new_command(message: types.Message):
+    await bot.send_message(message.chat.id,
+                           'Здавствуйте, пока не придумал ничего что добавить в эту команду')
 
     # else:
     #     await message.answer(message.text)
@@ -103,3 +106,4 @@ def refister_handlers_cilent(dp: Dispatcher):
     dp.register_message_handler(problem, commands=['problem'])
     dp.register_message_handler(process_start_command, commands=['solve_task'])
     dp.register_message_handler(home_work2, commands=['home_work_2'])
+    dp.register_message_handler(new_command, commands=['new_command'])
