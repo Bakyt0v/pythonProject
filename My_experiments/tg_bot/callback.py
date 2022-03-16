@@ -271,6 +271,41 @@ async def home_work_22_4(call: types.CallbackQuery):
         is_anonymous=False,
         )
 
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+async def flex_4(call: types.CallbackQuery):
+    markup_flex2 = InlineKeyboardMarkup()
+    button_flex2 = InlineKeyboardButton('след задача', callback_data='button_flex2')
+    markup_flex2.add(button_flex2)
+    question = 'Flex_question'
+    answers = ['1','2','3','4','Error','5']
+    photo_flex2 = open('../media/lesson/flex_5.jpg', 'rb')
+    await bot.send_photo(call.message.chat.id, photo=photo_flex2)
+    await bot.send_poll(call.message.chat.id,
+                        question=question,
+                        options=answers,
+                        is_anonymous=False,
+                        correct_option_id=4,
+                        type='quiz',
+                        reply_markup=markup_flex2)
+
+
+async def flex_5(call: types.CallbackQuery):
+    markup_flex1 = InlineKeyboardMarkup()
+    button_flex1 = InlineKeyboardButton('след задача', callback_data='button_flex1')
+    markup_flex1.add(button_flex1)
+    question1 = 'Flex_question'
+    answers1 = ['1','2','3','4','Error','5']
+    photo_flex1 = open('../media/lesson/photo5294518972076637244.jpg', 'rb')
+    await bot.send_photo(call.message.chat.id, photo=photo_flex1)
+    await bot.send_poll(call.message.chat.id,
+                        question=question1,
+                        options=answers1,
+                        is_anonymous=False,
+                        correct_option_id=4,
+                        type='quiz',
+                        reply_markup=markup_flex1)
 #
 # async def home_work_2_2_call(call: types.CallbackQuery):
 #     markup_home_work_call = InlineKeyboardMarkup()
@@ -319,5 +354,7 @@ def register_handlers_callback(dp: Dispatcher):
     dp.register_callback_query_handler(home_work_22_2, lambda func: func.data == 'button_good_1')
     dp.register_callback_query_handler(home_work_22_3, lambda func: func.data == 'button_good_2')
     dp.register_callback_query_handler(home_work_22_4, lambda func: func.data == 'button_good_3')
+    dp.register_callback_query_handler(flex_4, lambda func: func.data == 'button_flex')
+    dp.register_callback_query_handler(flex_5, lambda func: func.data == 'button_flex2')
     # dp.register_callback_query_handler(home_work_2_2_call, lambda func: func.data == 'button_01')
     # dp.register_callback_query_handler(homework_bad_2, lambda func: func.data == 'button_bad_1')

@@ -65,8 +65,8 @@ button1 = InlineKeyboardButton('It is easy to me', callback_data='button1')
 button2 = InlineKeyboardButton('It is so hard to me', callback_data='button2')
 button3 = InlineKeyboardButton('i am tired i just wanna see the result', callback_data='button3')
 button4 = InlineKeyboardButton('Tasks for lazy HUMANs', callback_data='button4')
-
-markup0.add(button1,button2,button3,button4)
+button_flex = InlineKeyboardButton('Flex_question', callback_data='button_flex')
+markup0.add(button1,button2,button3,button4, button_flex)
 
 async def process_start_command(message: types.Message):
     photo_1 = open('../media/home_work_solved/task1.png', 'rb')
